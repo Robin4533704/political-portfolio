@@ -23,7 +23,7 @@ const Home = () => {
   <a href="#essays" className="px-8 py-3 bg-blue-900 text-white font-semibold rounded-lg shadow-md hover:bg-blue-800 transition">
     View Research
   </a>
-  <a href="/cv.pdf" className="px-8 py-3 border-2 border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition">
+  <a href="/robiul CV Template.pdf" className="px-8 py-3 border-2 border-blue-900 text-blue-900 font-semibold rounded-lg hover:bg-blue-50 transition">
     Download CV
   </a>
 </div>
@@ -32,7 +32,7 @@ const Home = () => {
 <div className="max-w-3xl mx-auto p-8 bg-white border border-gray-100 shadow-sm rounded-xl mb-6">
   <h3 className="text-2xl font-bold text-gray-800 mb-2">Strategic Diplomacy: Russia-Bangladesh...</h3>
   <p className="text-gray-600 italic mb-4">A critical analysis of bilateral ties...</p>
-  <a href="#" className="text-blue-600 font-bold hover:underline">Read Abstract (PDF) →</a>
+  <a href="/Strategic_Diplomacy_Russia_Bangladesh_Abstract.pdf" className="text-blue-600 font-bold hover:underline">Read Abstract (PDF) →</a>
 </div>
       </section>
 
@@ -46,23 +46,11 @@ const Home = () => {
           </div>
           <Essays />
         </section>
-        
-
-        {/* Projects / Case Studies Section */}
-        <section id="projects" className="scroll-mt-20">
-          <div className="flex items-center gap-4 mb-10">
-            <h2 className="text-3xl font-bold text-slate-800">Strategic Projects</h2>
-            <div className="h-[2px] bg-slate-200 flex-grow"></div>
-          </div>
-          <Projects />
-        </section>
+      
 
         {/* Certifications Section */}
         <section id="certificates" className="scroll-mt-20 px-4 py-12 bg-slate-900 rounded-3xl text-white">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold">Honors & Certifications</h2>
-            <p className="text-slate-400 mt-2">Professional recognition and global participations</p>
-          </div>
+          
           <Certificates />
           <Footer/>
         </section>

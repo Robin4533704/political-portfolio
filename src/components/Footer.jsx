@@ -33,7 +33,7 @@ const Footer = () => {
               </a>
             </li>
             <li>
-              <a href="/cv.pdf" className="hover:text-white transition">
+              <a href="/robiul CV Template.pdf" className="hover:text-white transition">
                 Download CV
               </a>
             </li>
@@ -48,20 +48,20 @@ const Footer = () => {
           <ul className="space-y-3">
             <li>Email: 
               <a 
-                href="mailto:robiul@email.com" 
+                href="mailto:robinhossen8428@email.com" 
                 className="ml-2 hover:text-white transition"
               >
-                robiul@email.com
+               robinhossen8428@email.com
               </a>
             </li>
             <li>
-              <a href="https://linkedin.com" className="hover:text-white transition">
+              <a href="https://linkedin.com/in/robinhossen4533" className="hover:text-white transition">
                 LinkedIn Profile
               </a>
             </li>
             <li>
-              <a href="https://github.com" className="hover:text-white transition">
-                GitHub / Portfolio
+              <a href="https://github.com/Robin4533704" className="hover:text-white transition">
+                GitHub 
               </a>
             </li>
           </ul>

@@ -4,13 +4,13 @@ const essays = [
   {
     title: "Strategic Diplomacy: Russia-Bangladesh Relations in the 21st Century",
     desc: "A critical analysis of bilateral ties, energy security, and geopolitical cooperation in the Eurasian context.",
-    link: "/assets/essays/diplomacy-paper.pdf",
+    link: "/Strategic_Diplomacy_Russia_Bangladesh_Abstract.pdf",
     tags: ["Geopolitics", "Diplomacy"]
   },
   {
     title: "Digital Governance and Public Policy Frameworks",
     desc: "Exploring how technology reshapes political participation, state administration, and democratic accountability.",
-    link: "/assets/essays/digital-gov.pdf",
+    link: "/Digital Governance and Public Policy Frameworks.pdf",
     tags: ["Public Policy", "Digital Tech"]
   }
 ];
