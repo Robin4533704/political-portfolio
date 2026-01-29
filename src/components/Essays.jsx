@@ -19,85 +19,100 @@ const essays = [
 ];
 
 const Essays = () => (
-  <section id="essays" className="py-24 px-6 bg-[#0a0a0a] text-white">
+  <section id="essays" className="py-16 sm:py-10 px-4 sm:px-6 bg-[#0a0a0a] text-white">
     <div className="max-w-6xl mx-auto">
-      
+
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+      <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 sm:mb-16 gap-6">
         <div>
-          <div className="flex items-center gap-2 mb-4">
-            <BookOpen className="text-blue-500" size={20} />
-            <span className="text-blue-500 font-mono text-xs tracking-widest uppercase font-bold">Publications</span>
+          <div className="flex items-center gap-2 mb-3">
+            <BookOpen className="text-blue-500" size={18} />
+            <span className="text-blue-500 font-mono text-xs tracking-widest uppercase font-bold">
+              Publications
+            </span>
           </div>
-          <h2 className="text-4xl md:text-5xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
+
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-500">
             Academic Essays & Research
           </h2>
         </div>
-        <div className="h-1 md:w-1/3 w-full bg-gradient-to-r from-blue-600 to-transparent rounded-full opacity-50"></div>
+
+        <div className="h-1 w-full md:w-1/3 bg-gradient-to-r from-blue-600 to-transparent rounded-full opacity-50" />
       </div>
 
       {/* Essays Grid */}
-      <div className="grid md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-10">
         {essays.map((essay, index) => (
-          <div 
-            key={index} 
-            className="group relative p-1 bg-gradient-to-b from-gray-800 to-transparent rounded-[2rem] transition-all duration-500 hover:scale-[1.02]"
+          <div
+            key={index}
+            className="group relative p-[1px] bg-gradient-to-b from-gray-800 to-transparent rounded-3xl transition-transform duration-300 md:hover:scale-[1.02]"
           >
-            <div className="bg-[#0f0f0f] p-8 md:p-10 rounded-[1.9rem] h-full flex flex-col justify-between">
-              
+            <div className="bg-[#0f0f0f] p-6 sm:p-8 md:p-10 rounded-[1.85rem] h-full flex flex-col justify-between">
+
               <div>
-                {/* Meta Info */}
-                <div className="flex justify-between items-start mb-6">
-                  <div className="flex gap-2">
+                {/* Meta */}
+                <div className="flex flex-wrap justify-between gap-3 mb-5">
+                  <div className="flex flex-wrap gap-2">
                     {essay.tags.map((tag, i) => (
-                      <span key={i} className="text-[10px] uppercase tracking-tighter bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full font-bold">
+                      <span
+                        key={i}
+                        className="text-[10px] uppercase tracking-tight bg-blue-500/10 text-blue-400 border border-blue-500/20 px-3 py-1 rounded-full font-bold"
+                      >
                         {tag}
                       </span>
                     ))}
                   </div>
-                  <span className="text-gray-600 font-mono text-xs font-bold">{essay.date}</span>
+                  <span className="text-gray-600 font-mono text-xs font-bold">
+                    {essay.date}
+                  </span>
                 </div>
 
                 {/* Title */}
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-100 mb-4 group-hover:text-blue-400 transition-colors leading-tight">
+                <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-100 mb-4 md:group-hover:text-blue-400 transition-colors leading-snug">
                   {essay.title}
                 </h3>
-                
+
                 {/* Description */}
-                <div className="relative mb-8">
-                  <ScrollText className="absolute -left-2 -top-2 text-gray-800 opacity-50" size={40} />
-                  <p className="text-gray-400 leading-relaxed italic relative z-10 pl-6 border-l border-gray-800">
+                <div className="relative mb-6 sm:mb-8">
+                  <ScrollText
+                    className="absolute -left-2 -top-2 text-gray-800 opacity-40 hidden sm:block"
+                    size={36}
+                  />
+                  <p className="text-gray-400 text-sm sm:text-base leading-relaxed italic relative z-10 pl-4 sm:pl-6 border-l border-gray-800">
                     "{essay.desc}"
                   </p>
                 </div>
               </div>
 
-              {/* Action Link */}
-              <a 
-                href={essay.link} 
-                target="_blank" 
+              {/* Action */}
+              <a
+                href={essay.link}
+                target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-400 font-extrabold hover:text-blue-300 transition-all group/link"
+                className="inline-flex items-center gap-2 text-blue-400 font-extrabold hover:text-blue-300 transition group/link"
               >
-                <span className="text-sm tracking-widest uppercase">Read Full Abstract</span>
-                <div className="p-2 bg-blue-500/10 rounded-full group-hover/link:bg-blue-500 group-hover/link:text-white transition-all">
-                  <ArrowRight size={18} />
+                <span className="text-xs sm:text-sm tracking-widest uppercase">
+                  Read Full Abstract
+                </span>
+                <div className="p-2 bg-blue-500/10 rounded-full group-hover/link:bg-blue-500 group-hover/link:text-white transition">
+                  <ArrowRight size={16} />
                 </div>
               </a>
             </div>
 
-            {/* Background Decorative Element */}
-            <Bookmark className="absolute top-10 right-10 text-blue-500/5 group-hover:text-blue-500/10 transition-colors" size={80} />
+            {/* Decorative icon (desktop only) */}
+            <Bookmark className="hidden md:block absolute top-8 right-8 text-blue-500/5 group-hover:text-blue-500/10 transition-colors" size={70} />
           </div>
         ))}
       </div>
 
-      {/* Call to Action */}
-      <div className="mt-20 p-1 bg-gradient-to-r from-transparent via-gray-800 to-transparent rounded-full">
-        <div className="bg-[#0a0a0a] py-4 text-center text-gray-500 text-sm font-medium tracking-wide">
+      {/* Footer CTA */}
+      <div className="mt-16 sm:mt-20 p-[1px] bg-gradient-to-r from-transparent via-gray-800 to-transparent rounded-full">
+        <div className="bg-[#0a0a0a] py-3 text-center text-gray-500 text-xs sm:text-sm font-medium tracking-wide">
           Available for academic collaboration and research discussions.
         </div>
       </div>
+
     </div>
   </section>
 );

@@ -73,25 +73,25 @@ const Home = () => {
       </section>
 
       {/* Content Wrapper */}
-      <div className="max-w-7xl mx-auto px-6 pb-20">
+      <div className="max-w-7xl mx-auto px-6 pb-10">
         
         {/* Research Section */}
-        <section id="essays" className="scroll-mt-32 mb-32">
+        <section id="essays" className="">
           <Essays />
         </section>
 
         {/* Motivation Letter Section */}
-        <section id="motivation" className="scroll-mt-32 mb-32">
+        <section id="motivation" className=" ">
           <MotivationLetter />
         </section>
 
         {/* Certificates & Projects */}
         <div className="space-y-32">
-          <section id="projects" className="scroll-mt-32">
+          <section id="projects" className="">
             <Projects />
           </section>
 
-          <section id="certificates" className="scroll-mt-32 relative">
+          <section id="certificates" className="">
              {/* Decorative Background for Certificates */}
              <div className="absolute inset-0 bg-blue-600/5 rounded-[3rem] blur-3xl -z-10"></div>
              <Certificates />
